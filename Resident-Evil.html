@@ -11,8 +11,7 @@
 
 <body>
     <div class="Format-Video-Box">
-        <video src="Images-video/Resident-Evil.mp4" target="Iframe-Display" muted loop autoplay></video>
-        <iframe name="Iframe-Display" src="" scrolling="no" class="Iframe-format"></iframe>
+        <video id = "Video-Background"src="Images-video/Resident-Evil.mp4" muted loop autoplay></video>
     </div>
 
     <section class="showcase">
@@ -33,7 +32,7 @@
     </section>
 
     <article class="Initial-page">
-        <p><img class="logo box2d" src="Images-video/RE-LOGO.png" width="450" height="120" loading="lazy" alt=""></p>
+        <p><img src="Images-video/RE-LOGO.png" width="450" height="120" loading="lazy" alt=""></p>
         <aside class="nav-top">
             <ul>
                 <li><a href="#Game-Section">GAMES</a></li>
@@ -54,7 +53,6 @@
                 <h3 id="Game-Section">GAMES
                     <span>Enter the survival horror</span>
                 </h3>
-
                 <div class="game-images" id="test-iframe">
                     <iframe src="IframeRE.html" class="Iframe-Imagenes" scrolling="no"></iframe>
                 </div>
@@ -71,6 +69,7 @@
             </div>
         </section>
     </article>
+
     <script>
         let spanTexts = document.getElementsByTagName("span");
         window.onload = function () {
@@ -78,11 +77,6 @@
                 spanText.classList.add("active");
             }
         }
-
-        $(window).bind("load", function () {
-            $('#test-iframe').prepend('<iframe heref="IframeRE.html" class="Iframe-Imagenes" src="" scrolling="no"></iframe>');
-        });
-
     </script>
 
 </body>
