@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RE-Styles.css">
+    <title>Contact us</title>
+</head>
+
+<body>
+    <div class="Format-Video-Box">
+        <video src="Images-video/Resident-Evil.mp4" target="Iframe-Display" muted loop autoplay></video>
+        <iframe name="Iframe-Display" src="" scrolling="no" class="Iframe-format"></iframe>
+    </div>
+
+    <section class="showcase">
+        <header>
+            <div class="logo">
+                <h2>OLD GAME</h2>
+                <div class="back-text">
+                    <span>T</span>
+                    <span>R</span>
+                    <span>I</span>
+                    <span>B</span>
+                    <span>U</span>
+                    <span>T</span>
+                    <span>E</span>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <article class="Initial-page">
+        <p><img class="logo box2d" src="Images-video/RE-LOGO.png" width="450" height="120" loading="lazy" alt=""></p>
+        <aside class="nav-top">
+            <ul>
+                <li><a href="#Game-Section">GAMES</a></li>
+                <li><a href="#History-Section">HISTORY</a></li>
+                <li><a href="#">CHARACTERS</a></li>
+                <li><a href="#">BIO-WEAPONS</a></li>
+            </ul>
+        </aside>
+        <div class="banner-Umbrella">
+            <img src="Images-video/Umbrella-corp.png" alt="">
+            <h6>Our Business Is Life Itself...</h6>
+        </div>
+    </article>
+
+    <article class="contents-page">
+        <section class="section-games">
+            <div class="inner-game">
+                <h3 id="Game-Section">GAMES
+                    <span>Enter the survival horror</span>
+                </h3>
+
+                <div class="game-images" id="test-iframe">
+                    <iframe src="IframeRE.html" class="Iframe-Imagenes" scrolling="no"></iframe>
+                </div>
+            </div>
+
+        </section>
+        <section class="history-section">
+            <div class="inner-history">
+                <div class="title-section">
+                    <h3 id="History-Section">HISTORY
+                        <span>Everything has a beginning</span>
+                    </h3>
+                </div>
+            </div>
+        </section>
+    </article>
+    <script>
+        let spanTexts = document.getElementsByTagName("span");
+        window.onload = function () {
+            for (spanText of spanTexts) {
+                spanText.classList.add("active");
+            }
+        }
+
+        $(window).bind("load", function () {
+            $('#test-iframe').prepend('<iframe heref="IframeRE.html" class="Iframe-Imagenes" src="" scrolling="no"></iframe>');
+        });
+
+    </script>
+
+</body>
+
+</html>

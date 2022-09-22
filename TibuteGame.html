@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style-Tributegame.css">
+    <title>Tribute game</title>
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <div class="logo">
+                <h2>OLD GAME</h2>
+                <div class="back-text">
+                    <span>T</span>
+                    <span>R</span>
+                    <span>I</span>
+                    <span>B</span>
+                    <span>U</span>
+                    <span>T</span>
+                    <span>E</span>
+                </div>
+            </div>
+            <div class="toggle"></div>
+        </header>
+        <video src="Images-video/Background-Section3.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text-principal-page">
+            <h2>Tribute Game</h2>
+            <h3>Games that marked your childhood</h3>
+            <p>Who hasn't played a video game that marked their childhood? On this page we pay tribute to some of those magical games that made our childhood great with hours and hours of fun.</p>
+        </div>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="Singup-login.html">Log In/Sign Up</a></li>
+            <li><a href="#">Final Fantasy</a></li>
+            <li><a href="Resident-Evil.html">Resident Evil</a></li>
+            <li><a href="#">Silent Hill</a></li>
+            <li><a href="#">Assassins Creed</a></li>
+            <li><a href="#">Purchase</a></li>
+            <li><a href="Contact-Form.html">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () =>{
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+
+
+    </script>
+
+    <script>
+        let spanTexts = document.getElementsByTagName("span");
+        window.onload = function () {
+            for (spanText of spanTexts) {
+                spanText.classList.add("active");
+            }
+        }
+    </script>
+</body>
+
+</html>

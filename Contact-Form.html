@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style-Form.css">
+    <title>Contact us</title>
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <div class="logo">
+                <h2>OLD GAME</h2>
+                <div class="back-text">
+                    <span>T</span>
+                    <span>R</span>
+                    <span>I</span>
+                    <span>B</span>
+                    <span>U</span>
+                    <span>T</span>
+                    <span>E</span>
+                </div>
+            </div>
+        </header>
+        <video src="Images-video/Background-Section3.mp4" muted loop autoplay></video>
+        <div class="contact-box">
+            <div class="message">
+                <div class="success" id="success">
+                    Thanks for your message!!
+                </div>
+            </div>
+            <form id="Formulario" action="TibuteGame.html" method="post">
+                <input id="nombre" type="text" class="input-field" placeholder="Name">
+                <input id="email" type="email" class="input-field" placeholder="Email">
+                <textarea id="mensaje" type="text" class="input-field textarea-field"
+                    placeholder="Your mesagge"></textarea>
+
+                <div class="btn-order">
+                    <button id="enviarCorreo" type="submit" class="btn-format">Send</button>
+                    <button type="submit" class="btn-format">Back</button>
+                </div>
+                <br>
+                <div class="content-order">
+                    <h5>You can also find us at: </h5>
+                    <ul class="Social">
+                        <li><a href="#"><img src="Images-video/facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="Images-video/twitter.png" alt=""></a></li>
+                        <li><a href="#"><img src="Images-video/instagram.png" alt=""></a></li>
+                    </ul>
+                </div>
+
+            </form>
+
+
+    </section>
+
+    <script>
+        const form = document.getElementById("Formulario");
+        const success = document.getElementById("success");
+        const btnSend = document.getElementById('enviarCorreo');
+        btnSend.addEventListener("click", function (e) {
+            e.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const mensaje = document.getElementById("mensaje").value;
+            window.location.href = `mailto:juan.laborde33@gmail.com?
+                subject=EnvioDesdeFormulario&body=Nombre%3A${nombre}%0ACorreo%3A${email}%0AMensaje%3A${mensaje}`;
+            form.reset();
+            success.style.display = `block`
+        });
+    </script>
+    <script>
+        let spanTexts = document.getElementsByTagName("span");
+        window.onload = function () {
+            for (spanText of spanTexts) {
+                spanText.classList.add("active");
+            }
+        }
+    </script>
+    </div>
+</body>
+
+</html>
