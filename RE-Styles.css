@@ -20,11 +20,23 @@ html{
     }
 }
 
-p {
+.logo-position {
     position: absolute;
     z-index: 20;
     padding: 175px;
 }
+
+::-webkit-scrollbar{
+    width: 12px;
+    background: black;
+}
+::-webkit-scrollbar-thumb{
+    background: #880808;
+    border-radius: 6px;
+}
+
+
+
 
 /*-----------------------------BACKGROUND VIDEO FORMAT-----------------------------------*/
 
@@ -183,13 +195,14 @@ video {
     width: 100%;
     height: calc(100vh + 100px);
     overflow: hidden;
+    background: rgba(0,0,0,.7);
 }
 
 .nav-top {
     position: absolute;
     padding: 340px 200px 200px 198px;
     z-index: 20;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -230,6 +243,28 @@ video {
     font-size: 35px;
 }
 
+.underline-hover-efect{    
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+
+.underline-hover-efect::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #880808;
+    transition: width 0.25s ease-out;
+}
+
+.underline-hover-efect:hover::before{
+   width: 100%;
+   left: 0;
+   right:auto;
+}
+
 /*-----------------------------UMBRELLA CORP: BANNER-----------------------------------*/
 
 .banner-Umbrella {
@@ -261,7 +296,6 @@ video {
     aspect-ratio: auto 2200px / 263;
     height: 224.5px;
     margin: 0px 0px 0px 30px;
-    ;
     padding: 0;
     border: 0;
     font: inherit;
@@ -309,7 +343,7 @@ video {
     background: rgba(0, 0, 0, .7);
     border-bottom: 1px solid #3a3a3a;
     overflow: hidden;
-    background: transparent;
+    background: rgba(0,0,0,.7);
 }
 
 .contents-page .section-games .inner-game {
@@ -325,6 +359,7 @@ video {
     justify-content: space-between;
     width: 1190px;
     margin: 0 auto;
+
 }
 
 .contents-page .section-games .inner-game h3 {
@@ -369,227 +404,18 @@ video {
     color: #fff;
     -webkit-text-size-adjust: 100%;
     visibility: visible;
+    font: inherit;
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
     vertical-align: baseline;
     position: relative;
     width: 100%;
     height: 500px;
     transition: opacity 1s linear .4s, left 1s ease-out .4s;
     opacity: 1;
-    left: 0;
     background: transparent;   
 }
-
-/*-----------------------------IMAGE SLIDER IN SECTION GAME-----------------------------------*/
-
-.button{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    transition: .5s;
-    background:transparent;
-}
-
-.button:hover{
-    background: transparent;
-    
-}
-
-.Iframe-Imagenes { 
-    margin-left: 10px;
-    border: 0;
-    width: 1990px;
-    height: 550px;  
-    background: transparent;
-    z-index: 3;
-    visibility: visible;  
-    
-}
-
-.image-resize{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transition: .5s;
-    filter: saturate(10%);
-}
-
-.image-resize2{
-    position: relative;
-    width: 300px;
-    height: 300px;
-    transition: .5s;
-    filter: saturate(100%);
-}
-
-.image-slider{
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .7s;
-    background: transparent;
-    text-align: center;
-    
-}
-
-.image-slider .slides-div a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Eurostile Extended', sans-serif;
-}
-
-.slides-div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 30px 0 30px;
-    background: transparent;
-}
-
-#slider-span1:target ~ .image-slider #img1,
-#slider-span1:target ~ .image-slider #button-1{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span2:target ~ .image-slider #img2,
-#slider-span2:target ~ .image-slider #button-2{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span3:target ~ .image-slider #img3,
-#slider-span3:target ~ .image-slider #button-3{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span4:target ~ .image-slider #img4,
-#slider-span4:target ~ .image-slider #button-4{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span5:target ~ .image-slider #img5,
-#slider-span5:target ~ .image-slider #button-5{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span6:target ~ .image-slider #img6,
-#slider-span6:target ~ .image-slider #button-6{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span7:target ~ .image-slider #img7,
-#slider-span7:target ~ .image-slider #button-7{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span8:target ~ .image-slider #img8,
-#slider-span8:target ~ .image-slider #button-8{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span9:target ~ .image-slider #img9,
-#slider-span9:target ~ .image-slider #button-9{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span10:target ~ .image-slider #img10,
-#slider-span10target ~ .image-slider #button-10{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span11:target ~ .image-slider #img11,
-#slider-span11:target ~ .image-slider #button-11{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span12:target ~ .image-slider #img12,
-#slider-span12:target ~ .image-slider #button-12{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span13:target ~ .image-slider #img13,
-#slider-span13:target ~ .image-slider #button-13{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span14:target ~ .image-slider #img14,
-#slider-span14:target ~ .image-slider #button-14{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider-span15:target ~ .image-slider #img15,
-#slider-span15:target ~ .image-slider #button-15{
-    width: 380px;
-    height: 380px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-/* Image position*/
-
-#slider-span1:target ~ .image-slider {left: 100%}
-#slider-span2:target ~ .image-slider {left: 85%}
-#slider-span3:target ~ .image-slider {left: 70%}
-#slider-span4:target ~ .image-slider {left: 55%}
-#slider-span5:target ~ .image-slider {left: 40%}
-#slider-span6:target ~ .image-slider {left: 25%}
-#slider-span7:target ~ .image-slider {left: 10%}
-#slider-span8:target ~ .image-slider {left: -5%}
-#slider-span9:target ~ .image-slider {left: -20%}
-#slider-span10:target ~ .image-slider {left:-35%}
-#slider-span11:target ~ .image-slider {left: -50%}
-#slider-span12:target ~ .image-slider {left: -65%}
-#slider-span13:target ~ .image-slider {left: -80%}
-#slider-span14:target ~ .image-slider {left: -95%}
-#slider-span15:target ~ .image-slider {left: 100%}
 
 /*----------------------------------------HISTORY SECTION------------------------------------------*/
 
@@ -602,23 +428,31 @@ video {
     border: 0;
     font: inherit;
     vertical-align: baseline;    
-    position: absolute;
+    position: relative;
     border-bottom: 1px solid #3a3a3a;
     background: #000;
     width: 100%;
+    
 
+}
+.history-section{
+    background-image: url("Images-video/Resident-Evil/Spencer-manor.jpg");
+    background-repeat: no-repeat;
+    z-index: 0 !important;
+    background-attachment: fixed;
+    color: black;
+    background-size: cover;
 }
 .history-section .inner-history{
     color: rgb(255, 255, 255);
     text-size-adjust: 100%;
     visibility: visible;
-    margin: 0;
+    padding: 0;
     border: 0;
     font: inherit;
     vertical-align: baseline;
     position: relative;
     width: 100%;
-    background: url(Images-video/Spencer-manor.jpg) no-repeat calc(50% + 600px) center;
     padding: 165px 0 225px;
     transition: opacity 1s,transform 1s;
     opacity: 1;
@@ -629,8 +463,6 @@ video {
     color: #fff;
     -webkit-text-size-adjust: 100%;
     visibility: visible;
-    padding: 0;
-    border: 0;
     font: inherit;
     vertical-align: baseline;
     display: flex;
@@ -643,6 +475,7 @@ video {
 .history-section .inner-history .title-section h3{
     -webkit-text-size-adjust: 100%;
     visibility: visible;
+    font: inherit;
     padding: 0;
     border: 0;
     font: inherit;
@@ -657,16 +490,12 @@ video {
     line-height: 1;
     letter-spacing: .05em;
     text-shadow: 0 0 5px #000;
-    transition: opacity .6s, transform .6s ease-out;
     opacity: 1;
-    transform: translateY(0);
 }
 
 .history-section .inner-history .title-section h3 span{
     -webkit-text-size-adjust: 100%;
     visibility: visible;
-    padding: 0;
-    border: 0;
     font: inherit;
     vertical-align: baseline;
     display: block;
@@ -679,3 +508,84 @@ video {
     text-shadow: 0 0 5px #000;
     letter-spacing: 0em;
 }
+
+/*----------------------------------------CHARACTER SECTION------------------------------------------*/
+
+.characters-section{
+    color: rgb(255, 255, 255);
+    text-size-adjust: 100%;
+    visibility: visible;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    width: 100%;
+    padding: 120px 0 80px;        
+    border-bottom: 1px solid #3a3a3a;
+    overflow: hidden;
+    position: relative;
+}
+
+.characters-section .inner-characters{
+    color: rgb(255, 255, 255);
+    text-size-adjust: 100%;
+    visibility: visible;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.characters-section .inner-characters .title-section-ch{
+    color: #fff;
+    -webkit-text-size-adjust: 100%;
+    visibility: visible;
+    font: inherit;
+    vertical-align: baseline;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: calc(50% + 110px);
+    margin: 0 0 2vh;
+}
+
+.characters-section .inner-characters .title-section-ch h3{
+    -webkit-text-size-adjust: 100%;
+    visibility: visible;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    position: relative;
+    margin: 0 0 2vh;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .05em;
+    text-shadow: 0 0 5px #000;
+    opacity: 1;
+}
+
+.characters-section .inner-characters .title-section-ch h3 span{
+    -webkit-text-size-adjust: 100%;
+    visibility: visible;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    width: 690px;
+    margin: 2px 0 0 6px;
+    color: #e7e7e7;
+    font-family: "Oswald",serif;
+    font-size: 1.0rem;
+    line-height: 2;
+    text-shadow: 0 0 5px #000;
+    letter-spacing: 0em;
+}
+

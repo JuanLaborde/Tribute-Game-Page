@@ -1,0 +1,66 @@
+#imageSlide {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+    height: 462px;
+    overflow: hidden
+   
+}
+
+ul{
+    list-style: none;
+}
+
+#imageSlide .imageSlide__slider {
+    display: flex;
+    width: 6850px;
+    -webkit-animation: imageSlide 20s linear 0s infinite normal;
+    animation: imageSlide 20s linear 0s infinite normal
+}
+
+#imageSlide .imageSlide__slider li {
+    width: 460px;
+    line-height: 1
+    
+}
+
+#imageSlide .imageSlide__slider li img {
+    width: 460px;
+    height: 460px;
+}
+
+#imageSlide .imageSlide__description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 1070px;
+    height: 450px;
+    margin: 0 auto;
+    background: url(/residentevil/pc/img/integration/slider_circle-en.png) no-repeat right center/40%;
+    transform: translateX(50%)
+}
+
+@-webkit-keyframes imageSlide {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-5980px)
+    }
+}
+
+@keyframes imageSlide {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-5980px)
+    }
+}
