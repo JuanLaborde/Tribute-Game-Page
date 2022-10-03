@@ -589,3 +589,176 @@ video {
     letter-spacing: 0em;
 }
 
+.characters-section.body-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: transparent;
+}
+
+.characters-section .container-cards{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.characters-section .container-cards .card{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    display: flex;  
+
+}
+
+.img-title{
+    width: 15%;
+    margin-left: 20px;
+}
+
+.img-chracter {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.characters-section .container-cards .card .content-card{
+    position: absolute;
+    bottom: -160px;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.5s;
+}
+
+.characters-section .container-cards .card:hover .content-card{
+    bottom: 0px;
+}
+
+.characters-section .container-cards .card .content-card .contentBx h3{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 15px;
+    line-height: 1.1em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.characters-section .container-cards .card:hover .content-card .contentBx h3{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.characters-section .container-cards .card .content-card .contentBx h3 span{
+   font-size: 12px;
+   font-weight: 300;
+   text-transform: initial;
+}
+
+/*----------------------------------------BIO-WEAPON SECTION------------------------------------------*/
+
+.bioweapon-section{
+    color: rgb(255, 255, 255);
+    text-size-adjust: 100%;
+    visibility: visible;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    width: 100%;
+    padding: 120px 0 80px;        
+    border-bottom: 1px solid #3a3a3a;
+    overflow: hidden;
+    position: relative;
+}
+
+.bioweapon-section{
+    background-image: url("Images-video/Resident-Evil/Wallpaper-RE2.1080.jpg");
+    background-repeat: no-repeat;
+    z-index: 0 !important;
+    background-attachment: fixed;
+    color: black;
+    background-size: cover;
+}
+
+.bioweapon-section .inner-bioweapon{
+    color: rgb(255, 255, 255);
+    text-size-adjust: 100%;
+    visibility: visible;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.bioweapon-section .inner-bioweapon .title-section-bow{
+    color: #fff;
+    -webkit-text-size-adjust: 100%;
+    visibility: visible;
+    font: inherit;
+    vertical-align: baseline;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: calc(50% + 110px);
+    margin: 0 0 2vh;
+}
+
+.bioweapon-section .inner-bioweapon .title-section-bow h3{
+    -webkit-text-size-adjust: 100%;
+    visibility: visible;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    position: relative;
+    margin: 0 0 2vh;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .05em;
+    text-shadow: 0 0 5px #000;
+    opacity: 1;
+}
+
+.bioweapon-section .inner-bioweapon .title-section-bow h3 span{
+    -webkit-text-size-adjust: 100%;
+    visibility: visible;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    width: 690px;
+    margin: 2px 0 0 6px;
+    color: #e7e7e7;
+    font-family: "Oswald",serif;
+    font-size: 1.0rem;
+    line-height: 2;
+    text-shadow: 0 0 5px #000;
+    letter-spacing: 0em;
+}
