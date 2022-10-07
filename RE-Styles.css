@@ -2,20 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto+Condensed:wght@300;400;700&display=swap');
 @import url('http://fonts.cdnfonts.com/css/eurostile-extended');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
 /*-----------------------------GENERAL CONFIGURATION-----------------------------------*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;    
+    font-family: 'Poppins', sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-@media  screen and(prefers-reduce-motion: reduce) {
-    html{
+@media screen and(prefers-reduce-motion: reduce) {
+    html {
         scroll-behavior: auto;
     }
 }
@@ -26,11 +27,12 @@ html{
     padding: 175px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 12px;
     background: black;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: #880808;
     border-radius: 6px;
 }
@@ -40,8 +42,8 @@ html{
 
 /*-----------------------------BACKGROUND VIDEO FORMAT-----------------------------------*/
 
-body #Video-Background{
-    
+body #Video-Background {
+
     z-index: 0 !important;
     background-attachment: fixed;
     color: black;
@@ -195,7 +197,7 @@ video {
     width: 100%;
     height: calc(100vh + 100px);
     overflow: hidden;
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
 }
 
 .nav-top {
@@ -204,7 +206,6 @@ video {
     z-index: 20;
     font-family: 'Oswald', sans-serif;
 }
-
 
 .nav-top ul {
     list-style: none;
@@ -243,12 +244,12 @@ video {
     font-size: 35px;
 }
 
-.underline-hover-efect{    
+.underline-hover-efect {
     padding-bottom: 0.25rem;
     position: relative;
 }
 
-.underline-hover-efect::before{
+.underline-hover-efect::before {
     content: "";
     position: absolute;
     left: 0;
@@ -259,10 +260,10 @@ video {
     transition: width 0.25s ease-out;
 }
 
-.underline-hover-efect:hover::before{
-   width: 100%;
-   left: 0;
-   right:auto;
+.underline-hover-efect:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
 }
 
 /*-----------------------------UMBRELLA CORP: BANNER-----------------------------------*/
@@ -323,7 +324,7 @@ video {
     margin: 0;
     border: 0;
     font: inherit;
-    vertical-align: baseline;    
+    vertical-align: baseline;
     position: relative;
     padding: 0;
     background: transparent;
@@ -343,7 +344,7 @@ video {
     background: rgba(0, 0, 0, .7);
     border-bottom: 1px solid #3a3a3a;
     overflow: hidden;
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
 }
 
 .contents-page .section-games .inner-game {
@@ -414,12 +415,12 @@ video {
     height: 500px;
     transition: opacity 1s linear .4s, left 1s ease-out .4s;
     opacity: 1;
-    background: transparent;   
+    background: transparent;
 }
 
 /*----------------------------------------HISTORY SECTION------------------------------------------*/
 
-.history-section{
+.history-section {
     color: rgb(255, 255, 255);
     text-size-adjust: 100%;
     visibility: visible;
@@ -427,15 +428,16 @@ video {
     padding: 0;
     border: 0;
     font: inherit;
-    vertical-align: baseline;    
+    vertical-align: baseline;
     position: relative;
     border-bottom: 1px solid #3a3a3a;
     background: #000;
     width: 100%;
-    
+
 
 }
-.history-section{
+
+.history-section {
     background-image: url("Images-video/Resident-Evil/Spencer-manor.jpg");
     background-repeat: no-repeat;
     z-index: 0 !important;
@@ -443,7 +445,8 @@ video {
     color: black;
     background-size: cover;
 }
-.history-section .inner-history{
+
+.history-section .inner-history {
     color: rgb(255, 255, 255);
     text-size-adjust: 100%;
     visibility: visible;
@@ -454,12 +457,12 @@ video {
     position: relative;
     width: 100%;
     padding: 165px 0 225px;
-    transition: opacity 1s,transform 1s;
+    transition: opacity 1s, transform 1s;
     opacity: 1;
     transform: scale(1);
 }
 
-.history-section .inner-history .title-section{
+.history-section .inner-history .title-section {
     color: #fff;
     -webkit-text-size-adjust: 100%;
     visibility: visible;
@@ -472,7 +475,7 @@ video {
     margin: 0 0 2vh;
 }
 
-.history-section .inner-history .title-section h3{
+.history-section .inner-history .title-section h3 {
     -webkit-text-size-adjust: 100%;
     visibility: visible;
     font: inherit;
@@ -493,7 +496,7 @@ video {
     opacity: 1;
 }
 
-.history-section .inner-history .title-section h3 span{
+.history-section .inner-history .title-section h3 span {
     -webkit-text-size-adjust: 100%;
     visibility: visible;
     font: inherit;
@@ -502,7 +505,7 @@ video {
     width: 690px;
     margin: 2px 0 0 6px;
     color: #e7e7e7;
-    font-family: "Oswald",serif;
+    font-family: "Oswald", serif;
     font-size: 1.0rem;
     line-height: 2;
     text-shadow: 0 0 5px #000;
@@ -511,7 +514,7 @@ video {
 
 /*----------------------------------------CHARACTER SECTION------------------------------------------*/
 
-.characters-section{
+.characters-section {
     color: rgb(255, 255, 255);
     text-size-adjust: 100%;
     visibility: visible;
@@ -521,13 +524,13 @@ video {
     vertical-align: baseline;
     display: block;
     width: 100%;
-    padding: 120px 0 80px;        
+    padding: 120px 0 80px;
     border-bottom: 1px solid #3a3a3a;
     overflow: hidden;
     position: relative;
 }
 
-.characters-section .inner-characters{
+.characters-section .inner-characters {
     color: rgb(255, 255, 255);
     text-size-adjust: 100%;
     visibility: visible;
@@ -542,7 +545,7 @@ video {
     margin: 0 auto;
 }
 
-.characters-section .inner-characters .title-section-ch{
+.characters-section .inner-characters .title-section-ch {
     color: #fff;
     -webkit-text-size-adjust: 100%;
     visibility: visible;
@@ -555,7 +558,7 @@ video {
     margin: 0 0 2vh;
 }
 
-.characters-section .inner-characters .title-section-ch h3{
+.characters-section .inner-characters .title-section-ch h3 {
     -webkit-text-size-adjust: 100%;
     visibility: visible;
     font: inherit;
@@ -573,7 +576,7 @@ video {
     opacity: 1;
 }
 
-.characters-section .inner-characters .title-section-ch h3 span{
+.characters-section .inner-characters .title-section-ch h3 span {
     -webkit-text-size-adjust: 100%;
     visibility: visible;
     font: inherit;
@@ -582,101 +585,151 @@ video {
     width: 690px;
     margin: 2px 0 0 6px;
     color: #e7e7e7;
-    font-family: "Oswald",serif;
+    font-family: "Oswald", serif;
     font-size: 1.0rem;
     line-height: 2;
     text-shadow: 0 0 5px #000;
     letter-spacing: 0em;
 }
 
-.characters-section.body-card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+.slider-ch {
+    position: relative;
     background: transparent;
-}
-
-.characters-section .container-cards{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 40px 0;
-}
-
-.characters-section .container-cards .card{
-    position: relative;
-    width: 200px;
-    height: 300px;
+    width: 800px;
+    min-height: 500px;
     margin: 20px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    border-radius: 15px;
-    display: flex;  
-
+    border-radius: 10px;
 }
 
-.img-title{
-    width: 15%;
-    margin-left: 20px;
+.slider-ch .slide-ch {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
 }
 
-.img-chracter {
-    width:100%;
-    height:100%;
+.slider-ch .slide-ch.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+}
+
+.slider-ch .slide-ch img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.characters-section .container-cards .card .content-card{
+.slider-ch .slide-ch .info-ch {
     position: absolute;
-    bottom: -160px;
+    color: #222;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
     width: 100%;
-    height: 160px;
+    margin-top: 352px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+    color: white;
+}
+
+.slider-ch .slide-ch .info-ch h2 {
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.slider-ch .slide-ch .info-ch h2 span {
+    color: rgb(230, 11, 11);
+}
+
+.slider-ch .slide-ch .info-ch p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.navigation-ch {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+
+.slider-ch:hover .navigation-ch {
+    opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+    z-index: 999;
+    font-size: 2em;
+    color: #222;
+    background: rgba(136, 8, 8, 0.8);
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.prev-btn {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.next-btn {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility {
+    z-index: 999;
     display: flex;
     justify-content: center;
-    align-items: center;
-    z-index: 10;
-    flex-direction: column;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    transition: 0.5s;
 }
 
-.characters-section .container-cards .card:hover .content-card{
-    bottom: 0px;
+.navigation-visibility .slide-icon {
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
 }
 
-.characters-section .container-cards .card .content-card .contentBx h3{
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: center;
-    margin: 20px 0 15px;
-    line-height: 1.1em;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(-20px);
+.navigation-visibility .slide-icon.active {
+    background: #4285F4;
 }
 
-.characters-section .container-cards .card:hover .content-card .contentBx h3{
-    opacity: 1;
-    transform: translateY(0px);
+@media (max-width: 900px) {
+    .slider-ch {
+        width: 100%;
+    }
+
+    .slider-ch .slide-ch .info-ch {
+        position: relative;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-.characters-section .container-cards .card .content-card .contentBx h3 span{
-   font-size: 12px;
-   font-weight: 300;
-   text-transform: initial;
+@media (max-width: 500px) {
+    .slider-ch .slide-ch .info-ch h2 {
+        font-size: 1.8em;
+        line-height: 40px;
+    }
+
+    .slider-ch .slide-ch .info-ch p {
+        font-size: 0.9em;
+    }
 }
 
 /*----------------------------------------BIO-WEAPON SECTION------------------------------------------*/
 
-.bioweapon-section{
+.bioweapon-section {
     color: rgb(255, 255, 255);
     text-size-adjust: 100%;
     visibility: visible;
@@ -686,13 +739,13 @@ video {
     vertical-align: baseline;
     display: block;
     width: 100%;
-    padding: 120px 0 80px;        
+    padding: 120px 0 80px;
     border-bottom: 1px solid #3a3a3a;
     overflow: hidden;
     position: relative;
 }
 
-.bioweapon-section{
+.bioweapon-section {
     background-image: url("Images-video/Resident-Evil/Wallpaper-RE2.1080.jpg");
     background-repeat: no-repeat;
     z-index: 0 !important;
@@ -701,7 +754,7 @@ video {
     background-size: cover;
 }
 
-.bioweapon-section .inner-bioweapon{
+.bioweapon-section .inner-bioweapon {
     color: rgb(255, 255, 255);
     text-size-adjust: 100%;
     visibility: visible;
@@ -716,7 +769,7 @@ video {
     margin: 0 auto;
 }
 
-.bioweapon-section .inner-bioweapon .title-section-bow{
+.bioweapon-section .inner-bioweapon .title-section-bow {
     color: #fff;
     -webkit-text-size-adjust: 100%;
     visibility: visible;
@@ -729,7 +782,7 @@ video {
     margin: 0 0 2vh;
 }
 
-.bioweapon-section .inner-bioweapon .title-section-bow h3{
+.bioweapon-section .inner-bioweapon .title-section-bow h3 {
     -webkit-text-size-adjust: 100%;
     visibility: visible;
     font: inherit;
@@ -747,7 +800,7 @@ video {
     opacity: 1;
 }
 
-.bioweapon-section .inner-bioweapon .title-section-bow h3 span{
+.bioweapon-section .inner-bioweapon .title-section-bow h3 span {
     -webkit-text-size-adjust: 100%;
     visibility: visible;
     font: inherit;
@@ -756,9 +809,20 @@ video {
     width: 690px;
     margin: 2px 0 0 6px;
     color: #e7e7e7;
-    font-family: "Oswald",serif;
+    font-family: "Oswald", serif;
     font-size: 1.0rem;
     line-height: 2;
     text-shadow: 0 0 5px #000;
     letter-spacing: 0em;
+}
+
+/*=======================================FOOTER==========================================*/
+
+.end-page {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 45%, rgba(136,8,8,1) 80%);
+    height: 80px;
+    z-index: 100;
+    color: white;
+    
 }
