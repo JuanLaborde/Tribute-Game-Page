@@ -15,6 +15,11 @@ body #Video-Background{
     color: black;
 }
 
+a{
+  color: white;
+  text-decoration: none;
+}
+
 body input{
     font-family: 'Poppins', sans-serif;
 }
@@ -32,10 +37,6 @@ body input{
     color: white;
     z-index: 0;
     transition: 0.5s;
-}
-
-.showcase.active{
-    right: 300px;
 }
 
 .showcase header{
@@ -121,12 +122,7 @@ body input{
     .showcase, .showcase header {
         padding: 40px;
     }
-    .text-principal-page h2{
-        font-size: 3em;
-    }
-    .text-principal-page h3{
-        font-size: 2em;
-    }
+    
 }
 
 /*----------------------------------------FORM SIGN-IN & SIGN-UP---------------------------------------*/
@@ -280,6 +276,10 @@ form.sign-up-form{
     padding: 3rem 12% 2rem 17%;
 }
 
+.right-panel img{
+  margin-bottom: 100px;
+}
+
 .panel .content{
     color: #fff;
     transition: .9s .6s ease-in-out;
@@ -355,7 +355,7 @@ form.sign-up-form{
 }
 
 
-@media (max-width: 870px) {
+@media (max-width: 800px) {
     .container {
       min-height: 800px;
       height: 100vh;
@@ -462,7 +462,9 @@ form.sign-up-form{
     form {
       padding: 0 1.5rem;
     }
-  
+    .logo {
+      display: none;
+    }
     .image {
       display: none;
     }

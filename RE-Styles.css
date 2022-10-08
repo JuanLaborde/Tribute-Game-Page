@@ -8,7 +8,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 html {
@@ -21,12 +21,6 @@ html {
     }
 }
 
-.logo-position {
-    position: absolute;
-    z-index: 20;
-    padding: 175px;
-}
-
 ::-webkit-scrollbar {
     width: 12px;
     background: black;
@@ -37,8 +31,41 @@ html {
     border-radius: 6px;
 }
 
+/*==============================================LOADER========================================*/
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.loader > img {
+    width: 100%;
+}
 
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
 
 /*-----------------------------BACKGROUND VIDEO FORMAT-----------------------------------*/
 
@@ -148,10 +175,7 @@ video {
     color: white;
     z-index: 1;
     transition: 0.5s;
-}
-
-.showcase.active {
-    right: 300px;
+    background: rgba(0, 0, 0, .7);
 }
 
 .showcase header {
@@ -166,32 +190,16 @@ video {
     justify-content: space-between;
 }
 
-@media (max-width: 798px) {
-
-    .showcase,
-    .showcase header {
-        padding: 40px;
-    }
-
-    .text-principal-page h2 {
-        font-size: 3em;
-    }
-
-    .text-principal-page h3 {
-        font-size: 2em;
-    }
-}
-
 /*-----------------------------INITIAL PAGE MENU-----------------------------------*/
 
-.Initial-page {
-    color: #fff;
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
+.portal-top {
+  
+    display: block;
+    opacity: 1;
+    width: 100%;
+}
+
+.Initial-page {    
     vertical-align: baseline;
     position: relative;
     width: 100%;
@@ -201,35 +209,29 @@ video {
 }
 
 .nav-top {
-    position: absolute;
     padding: 340px 200px 200px 198px;
-    z-index: 20;
-    font-family: 'Oswald', sans-serif;
+    font: inherit;
+    vertical-align: baseline;
+    position: absolute;
+    bottom: 20vh;
+    z-index: 10;
 }
 
 .nav-top ul {
     list-style: none;
 }
 
-.nav-top li {
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    list-style: none;
-    padding: 0;
-    border: 0;
-    font: inherit;
+.nav-top li {    
     vertical-align: baseline;
     position: relative;
-    margin: 0 0 2vh;
+    margin: 0 0 1.5vh;
     color: #fff;
-    font-family: "Oswald", sans-serif;
     font-size: 2.3rem;
     font-weight: lighter;
     text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
-    line-height: 1;
-    transition: opacity .3s linear 0.4s, transform .3s ease-out 0.4s;
+    line-height: 1.5;   
     opacity: 1;
-    transform: translateX(0);
+    
 }
 
 .nav-top li a {
@@ -269,13 +271,6 @@ video {
 /*-----------------------------UMBRELLA CORP: BANNER-----------------------------------*/
 
 .banner-Umbrella {
-    color: #fff;
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
     vertical-align: baseline;
     position: absolute;
     left: 0;
@@ -288,18 +283,12 @@ video {
     z-index: 2;
 }
 
-.banner-Umbrella img {
-    -webkit-text-size-adjust: 100%;
-    list-style: none;
-    pointer-events: none;
-    color: #fff;
+.banner-Umbrella img {    
     width: 769.5px;
-    aspect-ratio: auto 2200px / 263;
     height: 224.5px;
     margin: 0px 0px 0px 30px;
     padding: 0;
     border: 0;
-    font: inherit;
     vertical-align: baseline;
     float: left;
 }
@@ -318,12 +307,6 @@ video {
 /*-----------------------------CONTENT SECTIONS AND GAME SECTION-----------------------------------*/
 
 .contents-page {
-    color: #fff;
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    margin: 0;
-    border: 0;
-    font: inherit;
     vertical-align: baseline;
     position: relative;
     padding: 0;
@@ -332,28 +315,15 @@ video {
 }
 
 .contents-page .section-games {
-    color: #fff;
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    margin: 0;
-    border: 0;
-    font: inherit;
     vertical-align: baseline;
     width: 100%;
     padding: 120px 0 80px;
     background: rgba(0, 0, 0, .7);
     border-bottom: 1px solid #3a3a3a;
     overflow: hidden;
-    background: rgba(0, 0, 0, .7);
 }
 
 .contents-page .section-games .inner-game {
-    color: #fff;
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    padding: 0;
-    border: 0;
-    font: inherit;
     vertical-align: baseline;
     display: flex;
     flex-wrap: wrap;
@@ -364,80 +334,53 @@ video {
 }
 
 .contents-page .section-games .inner-game h3 {
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    padding: 0;
-    border: 0;
-    font: inherit;
     vertical-align: baseline;
     position: relative;
-    margin: 0 0 2vh;
-    color: #fff;
-    font-family: "Oswald", sans-serif;
+    margin: 0 0 2vh;    
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 1;
     letter-spacing: .05em;
     text-shadow: 0 0 5px #000;
-    transition: opacity .6s, transform .6s ease-out;
     opacity: 1;
-    transform: translateY(0);
 }
 
 .contents-page .section-games .inner-game h3 span {
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
     text-shadow: 0 0 5px #000;
     padding: 0;
     border: 0;
-    font: inherit;
-    vertical-align: baseline;
+    font: inherit;    
     display: block;
     margin: 2px 0 0 6px;
     color: #e7e7e7;
-    font-family: "Oswald", serif;
     font-size: 1.0rem;
     line-height: 2;
     letter-spacing: 0em;
 }
 
 .game-images {
-    color: #fff;
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
-    margin: 0;
-    padding: 0;
-    border: 0;
     vertical-align: baseline;
     position: relative;
     width: 100%;
     height: 500px;
-    transition: opacity 1s linear .4s, left 1s ease-out .4s;
-    opacity: 1;
     background: transparent;
 }
 
 /*----------------------------------------HISTORY SECTION------------------------------------------*/
 
-.history-section {
-    color: rgb(255, 255, 255);
-    text-size-adjust: 100%;
+.contents-page .history-section {
     visibility: visible;
     margin: 0px;
-    padding: 0;
     border: 0;
-    font: inherit;
     vertical-align: baseline;
     position: relative;
     border-bottom: 1px solid #3a3a3a;
     background: #000;
     width: 100%;
-
-
+    overflow: hidden;
 }
 
-.history-section {
+.contents-page .history-section {
     background-image: url("Images-video/Resident-Evil/Spencer-manor.jpg");
     background-repeat: no-repeat;
     z-index: 0 !important;
@@ -446,48 +389,23 @@ video {
     background-size: cover;
 }
 
-.history-section .inner-history {
-    color: rgb(255, 255, 255);
-    text-size-adjust: 100%;
-    visibility: visible;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
-    position: relative;
-    width: 100%;
-    padding: 165px 0 225px;
-    transition: opacity 1s, transform 1s;
-    opacity: 1;
-    transform: scale(1);
-}
-
-.history-section .inner-history .title-section {
-    color: #fff;
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
+.contents-page .history-section .inner-history {
     vertical-align: baseline;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: calc(50% + 110px);
-    margin: 0 0 2vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1190px;
+    margin: 0 auto;
+    padding: 120px 0 80px;
 }
 
-.history-section .inner-history .title-section h3 {
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
-    padding: 0;
-    border: 0;
-    font: inherit;
+
+.contents-page .history-section .inner-history h3 {
+    
     vertical-align: baseline;
-    display: block;
     position: relative;
     margin: 0 0 2vh;
     color: #fff;
-    font-family: "Oswald", sans-serif;
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 1;
@@ -496,16 +414,11 @@ video {
     opacity: 1;
 }
 
-.history-section .inner-history .title-section h3 span {
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
-    vertical-align: baseline;
+.contents-page .history-section .inner-history h3 span {
     display: block;
     width: 690px;
     margin: 2px 0 0 6px;
     color: #e7e7e7;
-    font-family: "Oswald", serif;
     font-size: 1.0rem;
     line-height: 2;
     text-shadow: 0 0 5px #000;
@@ -515,13 +428,6 @@ video {
 /*----------------------------------------CHARACTER SECTION------------------------------------------*/
 
 .characters-section {
-    color: rgb(255, 255, 255);
-    text-size-adjust: 100%;
-    visibility: visible;
-    margin: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
     display: block;
     width: 100%;
     padding: 120px 0 80px;
@@ -531,12 +437,6 @@ video {
 }
 
 .characters-section .inner-characters {
-    color: rgb(255, 255, 255);
-    text-size-adjust: 100%;
-    visibility: visible;
-    padding: 0;
-    border: 0;
-    font: inherit;
     vertical-align: baseline;
     display: flex;
     flex-wrap: wrap;
@@ -545,29 +445,10 @@ video {
     margin: 0 auto;
 }
 
-.characters-section .inner-characters .title-section-ch {
-    color: #fff;
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
-    vertical-align: baseline;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: calc(50% + 110px);
-    margin: 0 0 2vh;
-}
-
-.characters-section .inner-characters .title-section-ch h3 {
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
-    vertical-align: baseline;
-    display: block;
+.characters-section .inner-characters h3 {    
+    vertical-align: baseline;   
     position: relative;
     margin: 0 0 2vh;
-    color: #fff;
-    font-family: "Oswald", sans-serif;
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 1;
@@ -576,16 +457,10 @@ video {
     opacity: 1;
 }
 
-.characters-section .inner-characters .title-section-ch h3 span {
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
-    vertical-align: baseline;
+.characters-section .inner-characters h3 span {
     display: block;
     width: 690px;
     margin: 2px 0 0 6px;
-    color: #e7e7e7;
-    font-family: "Oswald", serif;
     font-size: 1.0rem;
     line-height: 2;
     text-shadow: 0 0 5px #000;
@@ -703,40 +578,9 @@ video {
     background: #4285F4;
 }
 
-@media (max-width: 900px) {
-    .slider-ch {
-        width: 100%;
-    }
-
-    .slider-ch .slide-ch .info-ch {
-        position: relative;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 500px) {
-    .slider-ch .slide-ch .info-ch h2 {
-        font-size: 1.8em;
-        line-height: 40px;
-    }
-
-    .slider-ch .slide-ch .info-ch p {
-        font-size: 0.9em;
-    }
-}
-
 /*----------------------------------------BIO-WEAPON SECTION------------------------------------------*/
 
 .bioweapon-section {
-    color: rgb(255, 255, 255);
-    text-size-adjust: 100%;
-    visibility: visible;
-    margin: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
     display: block;
     width: 100%;
     padding: 120px 0 80px;
@@ -755,12 +599,6 @@ video {
 }
 
 .bioweapon-section .inner-bioweapon {
-    color: rgb(255, 255, 255);
-    text-size-adjust: 100%;
-    visibility: visible;
-    padding: 0;
-    border: 0;
-    font: inherit;
     vertical-align: baseline;
     display: flex;
     flex-wrap: wrap;
@@ -769,29 +607,10 @@ video {
     margin: 0 auto;
 }
 
-.bioweapon-section .inner-bioweapon .title-section-bow {
-    color: #fff;
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
-    vertical-align: baseline;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: calc(50% + 110px);
-    margin: 0 0 2vh;
-}
-
-.bioweapon-section .inner-bioweapon .title-section-bow h3 {
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
-    vertical-align: baseline;
+.bioweapon-section .inner-bioweapon h3 {
     display: block;
     position: relative;
     margin: 0 0 2vh;
-    color: #fff;
-    font-family: "Oswald", sans-serif;
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 1;
@@ -800,16 +619,10 @@ video {
     opacity: 1;
 }
 
-.bioweapon-section .inner-bioweapon .title-section-bow h3 span {
-    -webkit-text-size-adjust: 100%;
-    visibility: visible;
-    font: inherit;
-    vertical-align: baseline;
+.bioweapon-section .inner-bioweapon h3 span {
     display: block;
     width: 690px;
     margin: 2px 0 0 6px;
-    color: #e7e7e7;
-    font-family: "Oswald", serif;
     font-size: 1.0rem;
     line-height: 2;
     text-shadow: 0 0 5px #000;
@@ -820,9 +633,108 @@ video {
 
 .end-page {
     background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 45%, rgba(136,8,8,1) 80%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 45%, rgba(136, 8, 8, 1) 80%);
     height: 80px;
     z-index: 100;
     color: white;
-    
+
+}
+
+/*========================================MEDIA=======================================*/
+
+@media (max-width: 800px) {
+
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+    .nav-top {
+        padding: 50px 100px 100px 80px;
+        bottom: 35vh;
+        z-index: 10;
+    }
+
+    .nav-top p img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-top li {
+        font-size: 2rem;
+    }
+
+    .banner-Umbrella {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-Umbrella img {
+        width: 80%;
+        height: auto;
+        margin: 0px 0px 0px 15px;
+    }
+
+    .banner-Umbrella h6 {
+       display: none;
+    }
+
+    .contents-page .section-games .inner-game h3 {
+        margin-left: 25%;
+        font-size: 3.2rem;
+        font-weight: 400;
+    }
+    .contents-page .history-section .inner-history  h3 {
+        margin-left: 25%;
+        font-size: 3.2rem;
+        font-weight: 400;
+    }
+
+    .image, .image2 {
+        display: none;
+    }
+
+    .characters-section .inner-characters h3 {    
+        margin-left: 2.1%;
+        font-size: 3.2rem;
+        font-weight: 400;
+    }
+
+    .bioweapon-section .inner-bioweapon h3{
+        margin-left: 2.1%;
+        font-size: 3.2rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 800px) {
+    .slider-ch {
+        width: 100%;
+    }
+
+    .slider-ch .slide-ch .info-ch {
+        position: relative;
+        width: 100%;
+        height: auto;
+        
+    }
+    .slider-ch .slide-ch .info-ch h2 {
+        font-size: 1.8em;
+        line-height: 40px;
+    }
+
+    .slider-ch .slide-ch .info-ch p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 500px) {
+    .slider-ch .slide-ch .info-ch h2 {
+        font-size: 1.8em;
+        line-height: 40px;
+    }
+
+    .slider-ch .slide-ch .info-ch p {
+        font-size: 0.9em;
+    }
 }

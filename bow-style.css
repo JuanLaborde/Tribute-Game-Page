@@ -125,7 +125,7 @@
     transform: translateY(-50%);
     width: 4em;
     height: 4em;
-    background: #fff;
+    background: #880808;
     border-radius: 50%;
     text-align: center;
     line-height: 4.2em;
@@ -196,7 +196,15 @@
     }
 
     .BOW-image img {
-        width: 25%;
+        width: 50%;
+    }
+
+    .arrow-left {
+        left: -2em;
+    }
+
+    .arrow-right {
+        right: -2em;
     }
 
 }
