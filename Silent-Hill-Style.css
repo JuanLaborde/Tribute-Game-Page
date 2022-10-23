@@ -210,6 +210,13 @@ body #Image-Background {
     cursor: pointer;
 }
 
+.logo h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 .Logo-text {
     font-family: 'Poppins', sans-serif;
 }
@@ -657,124 +664,343 @@ body #Image-Background {
     text-shadow: 0 0 5px #000;
     letter-spacing: 0em;
 }
-
-/*-----------------------------SECTION OTHER WORLD-----------------------------------*/
-
-.contents-page .other-world-section {
-    visibility: visible;
-    margin: 0px;
-    border: 0;
-    vertical-align: baseline;
+.contents-page .history-section .Content-Slider-HIS {
     position: relative;
-    border-bottom: 1px solid #3a3a3a;
-    background: #000;
-    width: 100%;
+	font-size: 100%;
+	font-weight: 400;
+	min-height: 70vh;
+    font-family: 'Silent Hell of Cheryl', sans-serif;
+}
+
+
+.flex__container_HIS {
+    position: absolute;
+	top: 110px;
+     left: 200px;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap; 
+	-webkit-justify-content: flex-start;
+	-moz-justify-content: flex-start;
+	-ms-justify-content: flex-start;
+	-o-justify-content: flex-start;
+	justify-content: flex-start;
+	height: 85%;
+	width: 80%;
+	z-index: 1;
     overflow: hidden;
 }
 
-.contents-page .other-world-section {
+.flex__container_HIS.flex--active-HIS {
+	z-index: 2;
+}
+
+.text--sub--HIS {
+	font-size: 25px;
+	letter-spacing: 0.5rem;
+	margin-bottom: 0px;
+}
+
+.text--normal--HIS {
+	font-size: 15px;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 22px;
+	margin-top: 15px;
+}
+
+.flex__item_HIS {
+	height: 100vh;
+	color: #fff;
+	transition: transform 0.1s linear;
+}
+
+.flex__item_HIS--left {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	width: 50%;
+    height: 400px;    
+	transform-origin: left bottom;
+	transition: transform 0.1s linear 0.4s;
+	opacity: 0;
+	position: relative;
+	overflow: hidden;
+    background: black;
+    background-image: url("Images-video/Silent-Hill/cult.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 40%;
+    background-position: center;
+    
+}
+
+.flex__item_HIS--right {
+    display: flex;
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	width: 50%;
+	transform-origin: right center;
+	transition: transform 0.1s linear 0s;
+	opacity: 0;
+    background: transparent;
+    height: 400px;
+    position: relative;
+	overflow: hidden;
+}
+
+.flex__item_HIS--right img{
+    position: absolute;
+	width: 100%;
+    height: 100%;
+	transform: translate3d(0,0,0);
+	transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+    object-fit: cover;
+    box-shadow: inset 40px 0 40px -16px;
+}
+
+.flex--preStart-HIS .flex__item_HIS--left,
+.flex--preStart-HIS .flex__item_HIS--right,
+.flex--active-HIS .flex__item_HIS--left,
+.flex--active-HIS .flex__item_HIS--right {
+	opacity: 1;
+}
+
+
+
+.flex__content_HIS {
+	margin-left: 80px;
+    margin-bottom: 20px;
+	width: 70%;
+	opacity: 1;
+	transform: translate3d(0,0,0);
+	transition: transform 0.2s linear 0.2s, opacity 0.1s linear 0.2s;
+}
+
+/* Animate-START point */
+
+.flex__container_HIS.animate--start--HIS .flex__content_HIS {
+	transform: translate3d(0,-200%,0);
+	opacity: 0;
+}
+
+.flex__container_HIS.animate--start--HIS .SH__img_HIS {
+	transform: translate3d(-200px,0,0);
+	opacity: 0;
+}
+
+/* Animate-END point */
+
+.flex__container_HIS.animate--end-HIS .flex__item_HIS--left {
+	transform: scaleY(0);
+}
+
+.flex__container_HIS.animate--end-HIS .flex__item_HIS--right {
+	transform: scaleX(0);
+}
+
+.flex__container_HIS.animate--end-HIS .flex__content_HIS {
+	transform: translate3d(0,200%,0);
+	opacity: 0;
+}
+
+.flex__container_HIS.animate--end-HIS .SH__img_HIS {
+	transform: translate3d(200px,0,0);
+	opacity: 0;
+}
+
+
+.prev-btn-HIS,
+.next-btn-HIS {
+    z-index: 999;
+    font-size: 2em;
+    color: #222;
+    background: rgba(136, 8, 8, 0.8);
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.prev-btn-HIS {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-left: 157px;
+    margin-top: 280px;
+}
+
+.next-btn-HIS {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transform: translateX(1518px);
+    
+}
+
+.slider__navi_HIS {
+    position: absolute;
+    top: 0;
+    left: 72%;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.slider__navi_HIS figure {
+    height: 75px;
+    width: 150px;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: border 0.4s ease-in-out, bottom 0.4s ease-in-out, filter 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    bottom: -1.24rem;
+}
+
+
+.btn-image1 {
+    background-image: url("Images-video/Silent-Hill/SH-Town-day.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+.btn-image1:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image1.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    border-bottom: 2px solid red;
+}
+
+.btn-image2 {
+    background-image: url("Images-video/Silent-Hill/Silent-hill-gas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image2:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image2.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid red;
+}
+
+.btn-image3 {
+    background-image: url("Images-video/Silent-Hill/Alchemilla-Hospital.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image3:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image3.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid red;
+}
+
+.btn-image4 {
+    background-image: url("Images-video/Silent-Hill/Lakeside-Amusement-Park.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image4:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image4.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid red;
+}
+
+.btn-image5 {
+    background-image: url("Images-video/Silent-Hill/Midwich-Elementary-School.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image5:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image5.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid red;
+}
+
+.btn-image6 {
     background-image: url("Images-video/Silent-Hill/OtherWorld.jpg");
     background-repeat: no-repeat;
-    z-index: 0 !important;
-    background-attachment: fixed;
-    color: black;
     background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
 }
 
-.contents-page .other-world-section .inner-other-world {
-    vertical-align: baseline;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 1190px;
-    margin: 0 auto;
-    padding: 120px 0 80px;
+.btn-image6:hover {
+    filter: grayscale(50%);
 }
 
+.btn-image6.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid red;
+}
 
-.contents-page .other-world-section .inner-other-world h3 {
-
-    vertical-align: baseline;
+.faded {
     position: relative;
-    margin: 0 0 2vh;
-    color: #fff;
-    font-size: 3.2rem;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: .05em;
-    text-shadow: 0 0 5px #000;
-    opacity: 1;
-}
-
-.h3-section-title::before,
-.h3-section-title::after {
-    content: attr(data-glich2);
+    display: inline-block;
+    color: black;
+  }
+  .faded:after {
+    content: "";
     position: absolute;
-    top: 0px;
-    opacity: .8;
-    font-size: 3.2rem;
-    font-weight: 0;
-    line-height: 1;
-    letter-spacing: .02em;
-}
-
-.h3-section-title::before {
-    z-index: -1;
-    color: #17f8f8;
-    transform: translate(0, 0);
-    filter: contrast(200%);
-    animation: wiggles2 0.5s ease-in-out infinite;
-}
-
-.h3-section-title::after {
-    z-index: -2;
-    color: #ff2575;
-    transform: translate(0, 0);
-    filter: contrast(200%);
-    animation: wiggles .4s .2s ease-in-out infinite;
-}
-
-.h3-section-title:hover:before {
-    visibility: hidden;
-}
-
-.h3-section-title:hover::after {
-    visibility: hidden;
-}
-
-@keyframes wiggles2 {
-
-    0%,
-    30%,
-    60%,
-    90%,
-    100% {
-        transform: translate(0, 0);
-    }
-
-    15% {
-        transform: translate(-2.5%, -4%);
-    }
-
-    45% {
-        transform: translate(2.5%, 4%);
-    }
-
-    75% {
-        transform: translate(-2%, -3%);
-    }
-}
-
-.contents-page .other-world-section .inner-other-world h3 span {
     display: block;
-    width: 690px;
-    margin: 2px 0 0 6px;
-    color: #e7e7e7;
-    font-size: 1.0rem;
-    line-height: 2;
-    text-shadow: 0 0 5px #000;
-    letter-spacing: 0em;
-}
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+  }
+  .faded.faded-left:after {
+    box-shadow: inset 100px 0 100px -16px;
+  }
 
 /*-----------------------------SECTION GAMES-----------------------------------*/
 
@@ -833,6 +1059,54 @@ body #Image-Background {
     line-height: 2;
     text-shadow: 0 0 5px #000;
     letter-spacing: 0em;
+}
+
+.SH-slider {
+    display: flex;
+    margin-left: 850px;
+    margin-top: 150px;
+    min-height: 70vh;
+}
+
+.box-games-sh {
+    position:relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 120s linear infinite;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100%
+    {
+        transform: perspective(1000px) rotateY(3600deg);
+    }
+}
+
+.box-games-sh span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)* 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent,#0004);
+}
+
+.box-games-sh span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /*-----------------------------SECTION CHARACTERS-----------------------------------*/
@@ -910,7 +1184,7 @@ body #Image-Background {
 .flex__container {
     position: absolute;
 	top: 0;
-	left: 500px;
+	left: 650px;
 	display: flex;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -1065,7 +1339,7 @@ body #Image-Background {
 .prev-btn {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    margin-left: 350px;
+    margin-left: 500px;
     margin-top: 350px;
 }
 
@@ -1139,13 +1413,18 @@ body #Image-Background {
 #footer-SH {
     position: relative;
     width: 100%;
-    border-top: 1px solid #3a3a3a;
-    background: black;
+    background: transparent;
     visibility: visible !important;
     opacity: 1 !important;
     transition: visibility .3s, opacity .3s;
-    z-index: 10;
+    z-index: 200;
     overflow-x: visible;
+}
+
+#footer-SH {
+    background-image: url("Images-video/Silent-Hill/footer-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #footer-SH>section {
@@ -1159,22 +1438,6 @@ body #Image-Background {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 0 0;
-}
-
-
-#footer-SH .footer-SH_copy {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    width: 100%;
-    padding: 1px 0 0;
-    border-top: 1px solid #5a5a5a;
-    background-image: url("Images-video/Silent-Hill/Silent-Hill-4-1280x640.jpg");
-    background-repeat: no-repeat;
-    background-size: 1100px 400px;
-    background-position: calc(50% + 400px) 0;
-    color: #8e8e8e;
-    overflow: hidden;
 }
 
 #footer-SH .footer-SH_copy .footer-SH_copy-left {
@@ -1200,12 +1463,12 @@ body #Image-Background {
 #footer-SH .footer-SH_copy .footer-SH_copy-left .content-footer {
     align-items: center;
     padding: 0 0 0 45px;
-    border-left: 2px solid #cb0101;
+    border-left: 2px solid #fff;
     color: #fff;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 25px;
-    margin-right: 250px;
+    margin-top: 50px;
+    margin-right: 400px;
     margin-bottom: 25px;
     margin-left: 200px;
     float:left;
@@ -1232,12 +1495,12 @@ body #Image-Background {
 #footer-SH .footer-SH_copy .footer-SH_copy-left .contact-footer {
     align-items: center;
     padding: 0 0 0 45px;
-    border-left: 2px solid #cb0101;
+    border-left: 2px solid #fff;
     color: #fff;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 65px;
-    margin-right: 250px;
+    margin-top: 85px;
+    margin-right: 300px;
     margin-bottom: 25px;
     float:right;
 }

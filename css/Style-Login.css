@@ -379,7 +379,7 @@ form.sign-up-form {
 .layer-2 {
   flex: 1;
   background-color: #000;
-  background-image: url(Images-video/LogoTOG2.png);
+  background-image: url(../Images-video/LogoTOG2.png);
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
@@ -496,7 +496,7 @@ form.sign-up-form {
   }
 
   .layer-2 {
-    background-image: url(Images-video/Logo2TOG2.png);
+    background-image: url(../Images-video/Logo2TOG2.png);
   }
 }
 
@@ -532,6 +532,6 @@ form.sign-up-form {
   }
 
   .layer-2 {
-    background-image: url(Images-video/Logo3TOG2.png);
+    background-image: url(../Images-video/Logo3TOG2.png);
   }
 }

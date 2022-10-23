@@ -100,7 +100,7 @@
     position: relative;
     width: 60px;
     height: 60px;
-    background: url("Images-video/Menu.png");
+    background: url("../Images-video/Menu.png");
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: center;
@@ -108,7 +108,7 @@
 }
 
 .toggle.active{
-    background: url("Images-video/Close.png");
+    background: url("../Images-video/Close.png");
     background-repeat: no-repeat;
     background-size: 25px;
     background-position: center;
@@ -209,7 +209,7 @@
 .layer-2 {
     flex: 1;
     background-color: #000;
-    background-image: url(Images-video/LogoTOG2.png);
+    background-image: url(../Images-video/LogoTOG2.png);
     background-repeat: no-repeat;
     background-position: center;
     
